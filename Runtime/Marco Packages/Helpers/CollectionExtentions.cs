@@ -1,14 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public static class CollectionExtentions
+namespace MarcoUtilities.Extensions
 {
-    public static T GetRandomEntry<T>(this T[] _array)
+    /// <summary>
+    /// Contains a collection of extension methods for floats, vector3, transforms, gameobjects and meshes.
+    /// </summary>
+    public static class CollectionExtentions
     {
-        if (_array == null || _array.Length == 0) return default(T);
-        return _array[Random.Range(0, _array.Length)];
+        public static T GetRandomEntry<T>(this T[] _array)
+        {
+            if (_array == null || _array.Length == 0) return default(T);
+            return _array[Random.Range(0, _array.Length)];
+        }
+
+        public static T GetLastEntry<T>(this T[] _array)
+        {
+            if (_array == null || _array.Length == 0) return default(T);
+            return _array[_array.Length - 1];
+        }
     }
 }

@@ -1,24 +1,27 @@
 using System;
 using System.Collections.Generic;
 
-public static class ServiceLocator
+namespace MarcoUtilities.DesignPatterns 
 {
-    private static Dictionary<Type, object> objects = new Dictionary<Type, object>();
-
-    public static void RegisterService<T>(T t)
+    public static class ServiceLocator
     {
-        if (objects.ContainsKey(typeof(T)))
-        {
-            objects[typeof(T)] = t;
-        }
-        else
-        {
-            objects.Add(typeof(T), t);
-        }
-    }
+        private static Dictionary<Type, object> objects = new Dictionary<Type, object>();
 
-    public static T GetService<T>()
-    {
-        return (T)objects[typeof(T)];
+        public static void RegisterService<T>(T t)
+        {
+            if (objects.ContainsKey(typeof(T)))
+            {
+                objects[typeof(T)] = t;
+            }
+            else
+            {
+                objects.Add(typeof(T), t);
+            }
+        }
+
+        public static T GetService<T>()
+        {
+            return (T)objects[typeof(T)];
+        }
     }
 }

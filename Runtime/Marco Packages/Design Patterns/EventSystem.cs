@@ -1,25 +1,19 @@
-using System;
 using System.Collections.Generic;
 
-namespace MarcoHelpers
+namespace MarcoUtilities.DesignPatterns
 {
-    public enum EventName
-    {
-        PRESETS_LOADED = 0,
-        TAB_CHANGED = 1,
-        ON_OBJNAME_ALREADY_EXISTS = 2,
-        IMPORT_SUCCESS = 3,
-        MENU_OPENED = 4,
-        MENU_CLOSED = 5,
-    }
 
     public delegate void EventCallback(object _value);
 
+    /// <summary>
+    /// To refactor.
+    /// </summary>
+    /// <param name="_value"></param>
     public static class EventSystem
     {
-        private static Dictionary<EventName, List<EventCallback>> eventRegister = new Dictionary<EventName, List<EventCallback>>();
+        private static Dictionary<string, List<EventCallback>> eventRegister = new Dictionary<string, List<EventCallback>>();
 
-        public static void Subscribe(EventName _evt, EventCallback _func)
+        public static void Subscribe(string _evt, EventCallback _func)
         {
             if (!eventRegister.ContainsKey(_evt))
             {
@@ -29,7 +23,7 @@ namespace MarcoHelpers
             eventRegister[_evt].Add(_func);
         }
 
-        public static void Unsubscribe(EventName _evt, EventCallback _func)
+        public static void Unsubscribe(string _evt, EventCallback _func)
         {
             if (eventRegister.ContainsKey(_evt))
             {
@@ -37,7 +31,7 @@ namespace MarcoHelpers
             }
         }
 
-        public static void RaiseEvent(EventName _evt, object _value = null)
+        public static void RaiseEvent(string _evt, object _value = null)
         {
             if (eventRegister.ContainsKey(_evt))
             {
