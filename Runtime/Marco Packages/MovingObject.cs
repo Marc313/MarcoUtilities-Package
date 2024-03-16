@@ -300,5 +300,6 @@ namespace MarcoUtilities
 
         // TODO: Implement scaling
     }
-    #endregion
+
+#endregion
 }
