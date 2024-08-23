@@ -6,14 +6,39 @@ namespace MarcoUtilities.Extensions
     public static class GeneralExtensions
     {
         /// <summary>
-        /// Rounds a Vector3 to a Vector3Int
+        /// Rounds a <see cref="Vector3"/> to a <see cref="Vector3Int"/>.
         /// </summary>
-        /// <param presetNameField="vector"> The original Vector </param>
-        /// <returns></returns>
         #region Vector3 Helpers
         public static Vector3Int ToVector3Int(this Vector3 vector)
         {
             return new Vector3Int(Mathf.RoundToInt(vector.x), Mathf.RoundToInt(vector.y), Mathf.RoundToInt(vector.z));
+        }
+
+        /// <summary>
+        /// Overrides the y value of <paramref name="vector"/>
+        /// </summary>
+        /// <param name="vector"></param>
+        public static Vector3 SetY(this Vector3 vector, float yValue)
+        {
+            vector.y = yValue;
+            return vector;
+        }
+
+        /// <summary>
+        /// Returns a deviation of the <paramref name="vector"/>, but keeps the original intact.
+        /// </summary>
+        /// <param name="vector"></param>
+        public static Vector3 Where(this Vector3 vector, float? x = null, float? y = null, float? z = null)
+        {
+            Vector3 newVector = vector;
+            if (x != null)
+                newVector.x = (float) x;
+            if (y != null)
+                newVector.y = (float) y;
+            if (z != null)
+                newVector.z = (float) z;
+
+            return newVector;
         }
         #endregion
 
@@ -21,8 +46,6 @@ namespace MarcoUtilities.Extensions
         /// <summary>
         /// Sets the x value of _transform.position to _x
         /// </summary>
-        /// <param presetNameField="_transform"> Original transform </param>
-        /// <param presetNameField="_x"> New x value </param>
         public static void SetXPosition(this Transform _transform, float _x)
         {
             Vector3 newPos = _transform.position;
@@ -33,8 +56,6 @@ namespace MarcoUtilities.Extensions
         /// <summary>
         /// Sets the y value of _transform.position to _y
         /// </summary>
-        /// <param presetNameField="_transform"> Original transform </param>
-        /// <param presetNameField="_y"> New y value </param>
         public static void SetYPosition(this Transform _transform, float _y)
         {
             Vector3 newPos = _transform.position;
@@ -45,8 +66,6 @@ namespace MarcoUtilities.Extensions
         /// <summary>
         /// Sets the z value of _transform.position to _z
         /// </summary>
-        /// <param presetNameField="_transform"> Original transform </param>
-        /// <param presetNameField="_z"> New z value </param>
         public static void SetZPosition(this Transform _transform, float _z)
         {
             Vector3 newPos = _transform.position;
@@ -56,12 +75,7 @@ namespace MarcoUtilities.Extensions
         #endregion
 
         #region GameObject Helpers
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_object"></param>
-        /// <param name="_angle"></param>
-        /// <returns>Returns the rotation of the object</returns>
+        /// <returns> Returns the rotation of the object </returns>
         public static Quaternion RotateYToRight(this GameObject _object, float _angle)
         {
             Vector3 euler = _object.transform.rotation.eulerAngles;
@@ -79,12 +93,11 @@ namespace MarcoUtilities.Extensions
         #endregion
 
         /// <summary>
-        /// EXPERIMENTAL! I am not sure if this function works.
+        /// Extracts submeshes from a mesh.
         /// </summary>
-        /// <param name="_mesh"></param>
-        /// <param name="_materials"></param>
-        /// <param name="_meshRenderer"></param>
-        /// <returns></returns>
+        /// <remarks>
+        /// EXPERIMENTAL! I am not sure if this function works.
+        /// </remarks>
         public static Mesh[] SplitSubmeshes(this Mesh _mesh, Material[] _materials, MeshRenderer _meshRenderer)
         {
             List<Vector3>[] submeshVertices = new List<Vector3>[_materials.Length];
