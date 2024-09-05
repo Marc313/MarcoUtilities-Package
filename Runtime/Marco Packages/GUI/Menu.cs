@@ -3,8 +3,19 @@ using UnityEngine;
 
 namespace MarcoUtilities.GUI
 {
-    // Note: This has not been finished yet!
+    /// <summary>
+    /// Use this menu cell if you do not mind specifying the class of data you are expecting, 
+    /// or if you do not need to cast MenuData at all.
+    /// </summary>
+    public abstract class MenuCell : GenericMenuCell<MenuData>
+    {
+        public T2 GetCastedMenuData<T2>() where T2 : MenuData
+        {
+            return Data as T2;
+        }
+    }
 
+    // Note: This has not been finished yet!
 
     /// <summary>
     /// This menu also supports menu's that have different cells.
@@ -21,18 +32,6 @@ namespace MarcoUtilities.GUI
         public T GetMenuCellAtIndex<T>() where T : MenuData
         {
             return cells[0] as T;
-        }
-    }
-
-    /// <summary>
-    /// Use this menu cell if you do not mind specifying the class of data you are expecting, 
-    /// or if you do not need to cast MenuData at all.
-    /// </summary>
-    public abstract class MenuCell : GenericMenuCell<MenuData>
-    {
-        public T2 GetCastedMenuData<T2>() where T2 : MenuData
-        {
-            return Data as T2;
         }
     }
 }

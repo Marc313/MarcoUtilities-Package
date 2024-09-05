@@ -8,7 +8,7 @@ namespace MarcoUtilities.Extensions
         /// <summary>
         /// Rounds a <see cref="Vector3"/> to a <see cref="Vector3Int"/>.
         /// </summary>
-        #region Vector3 Helpers
+        #region Vector Helpers
         public static Vector3Int ToVector3Int(this Vector3 vector)
         {
             return new Vector3Int(Mathf.RoundToInt(vector.x), Mathf.RoundToInt(vector.y), Mathf.RoundToInt(vector.z));
@@ -40,9 +40,57 @@ namespace MarcoUtilities.Extensions
 
             return newVector;
         }
+
+        /// <summary>
+        /// Converts a <see cref="Vector2"/> into a <see cref="Vector3"/> with z = 0.
+        /// </summary>
+        public static Vector3 ToVector3(this Vector2 vector)
+        {
+            return new Vector3(vector.x, vector.y);
+        }
+
+        /// <summary>
+        /// Converts a <see cref="Vector3"/> into a <see cref="Vector2"/>, ignoring the z.
+        /// </summary>
+        public static Vector2 ToVector2(this Vector3 vector)
+        {
+            return new Vector2(vector.x, vector.y);
+        }
         #endregion
 
         #region Transform Helpers
+        /// <summary> Rotates a gameobject clockwise in the specified directions. </summary>
+        /// <returns> Returns the rotation of the object </returns>
+        public static Quaternion RotateClockwise(this Transform transform, float? angle_x = null, float? angle_y = null, float? angle_z = null)
+        {
+            Vector3 euler = transform.rotation.eulerAngles;
+            if (angle_x != null)
+                euler.x += (float)angle_x;
+            if (angle_y != null)
+                euler.y += (float)angle_y;
+            if (angle_z != null)
+                euler.z += (float)angle_z;
+
+            transform.rotation = Quaternion.Euler(euler);
+            return transform.rotation;
+        }
+
+        /// <summary> Sets the euler angles of a transform. </summary>
+        /// <returns> Returns the rotation of the object </returns>
+        public static Quaternion SetEuler(this Transform transform, float? angle_x = null, float? angle_y = null, float? angle_z = null)
+        {
+            Vector3 euler = transform.rotation.eulerAngles;
+            if (angle_x != null)
+                euler.x = (float)angle_x;
+            if (angle_y != null)
+                euler.y = (float)angle_y;
+            if (angle_z != null)
+                euler.z = (float)angle_z;
+
+            transform.rotation = Quaternion.Euler(euler);
+            return transform.rotation;
+        }
+
         /// <summary>
         /// Sets the x value of _transform.position to _x
         /// </summary>
@@ -59,7 +107,7 @@ namespace MarcoUtilities.Extensions
         public static void SetYPosition(this Transform _transform, float _y)
         {
             Vector3 newPos = _transform.position;
-            newPos.x = _y;
+            newPos.y = _y;
             _transform.position = newPos;
         }
 
@@ -69,19 +117,17 @@ namespace MarcoUtilities.Extensions
         public static void SetZPosition(this Transform _transform, float _z)
         {
             Vector3 newPos = _transform.position;
-            newPos.x = _z;
+            newPos.z = _z;
             _transform.position = newPos;
         }
         #endregion
 
         #region GameObject Helpers
+        /// <summary> Rotates a gameobject clockwise in the specified directions. </summary>
         /// <returns> Returns the rotation of the object </returns>
-        public static Quaternion RotateYToRight(this GameObject _object, float _angle)
+        public static Quaternion RotateClockwise(this GameObject gameObject, float? angle_x = null, float? angle_y = null, float? angle_z = null)
         {
-            Vector3 euler = _object.transform.rotation.eulerAngles;
-            euler.y += _angle;
-            _object.transform.rotation = Quaternion.Euler(euler);
-            return _object.transform.rotation;
+            return gameObject.transform.RotateClockwise(angle_x, angle_y, angle_z);
         }
         #endregion
 
@@ -89,6 +135,18 @@ namespace MarcoUtilities.Extensions
         public static float GetHalfModelHeight(this MeshRenderer meshRenderer)
         {
             return meshRenderer.bounds.size.y / 2;
+        }
+        #endregion
+
+        #region Collider Helpers
+        public static float GetColliderHeight(this Collider collider)
+        {
+            return collider.bounds.size.y;
+        }
+
+        public static float GetHalfColliderHeight(this Collider collider)
+        {
+            return GetColliderHeight(collider) / 2;
         }
         #endregion
 

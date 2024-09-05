@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MarcoUtilities.DesignPatterns 
+namespace MarcoUtilities.DesignPatterns
 {
     public static class ServiceLocator
     {
