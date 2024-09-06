@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using MarcoUtilities.GUI.Menus;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace MarcoUtilities.GUI
+namespace MarcoUtilities.Samples.Menus
 {
     public class ExampleMenuCell : GenericMenuCell<ExampleMenuData>
     {

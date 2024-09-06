@@ -1,0 +1,16 @@
+{
+    "name": "MarcoUtilities.Samples.Menus",
+    "rootNamespace": "",
+    "references": [
+        "GUID:96feb6db064157b4c80f01553e3024b1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
