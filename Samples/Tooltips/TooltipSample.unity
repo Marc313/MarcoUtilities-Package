@@ -227,6 +227,167 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &429516513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2713144731984835102, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_Name
+      value: TooltipManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713144731984835102, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755669247001425233, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755669247001425233, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755669247001425233, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 60.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755669247001425233, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755669247001425233, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755669247001425233, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400248333154709990, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400248333154709990, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400248333154709990, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400248333154709990, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400248333154709990, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400248333154709990, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -70.759995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660724745040602023, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660724745040602023, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569988629691633248, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484974278746994555, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8315addddf3ae34395a13c4321c4d3a, type: 3}
 --- !u!1 &689987267
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,15 +473,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 689987267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb8e3cb140cab244acae35cd1454134, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a984ed98cbd0142a6e1aff0c83631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPrefabOverride: {fileID: 1241650657433593412, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
-  startTitle: 
-  startDescription: 
-  allowOverflow: 0
-  tooltipDirection: 0
+  title: Skra
+  description: bbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  tooltipPrefabOverride: {fileID: 2490237303080821893, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
+  tooltipDirection: 3
   followMouse: 0
+  additionalOffset: 0
+  allowOverflow: 0
 --- !u!1 &744160353
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,15 +568,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 744160353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb8e3cb140cab244acae35cd1454134, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a984ed98cbd0142a6e1aff0c83631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPrefabOverride: {fileID: 1241650657433593412, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
-  startTitle: ???
-  startDescription: Mystery Item
-  allowOverflow: 0
-  tooltipDirection: 2
+  title: 
+  description: bbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  tooltipPrefabOverride: {fileID: 2490237303080821893, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
+  tooltipDirection: 3
   followMouse: 0
+  additionalOffset: 0
+  allowOverflow: 0
 --- !u!1 &749237383
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,20 +663,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 749237383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb8e3cb140cab244acae35cd1454134, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a984ed98cbd0142a6e1aff0c83631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPrefabOverride: {fileID: 1241650657433593412, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
-  startTitle: ???
-  startDescription: 'A Marco Special.
-
-    Where wonders can a Marco Special provide,
-    you may ask? Well, that sure in an interesting question. I might even provide
-    you an answer, since I need to test scaling tooltips anyway! Well, where do I
-    start. Marco is just a very special boy, with not a lot of talent in pool.'
-  allowOverflow: 0
+  title: Skra
+  description: bbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  tooltipPrefabOverride: {fileID: 2490237303080821893, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
   tooltipDirection: 0
   followMouse: 0
+  additionalOffset: 0
+  allowOverflow: 0
 --- !u!1 &973398053
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,15 +758,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 973398053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb8e3cb140cab244acae35cd1454134, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a984ed98cbd0142a6e1aff0c83631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPrefabOverride: {fileID: 1241650657433593412, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
-  startTitle: Wood
-  startDescription: Very useful for building
-  allowOverflow: 0
+  title: Skra
+  description: biem
+  tooltipPrefabOverride: {fileID: 2490237303080821893, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
   tooltipDirection: 0
   followMouse: 0
+  additionalOffset: 0
+  allowOverflow: 0
 --- !u!1 &1035147749
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,18 +921,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1257432908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb8e3cb140cab244acae35cd1454134, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a984ed98cbd0142a6e1aff0c83631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPrefabOverride: {fileID: 1241650657433593412, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
-  startTitle: Your mom
-  startDescription: 'Too fat to fit on screen, so she uses a different transform
-    anchor
-
-    She also sizes because she so fat.'
-  allowOverflow: 0
+  title: Skra
+  description: bbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  tooltipPrefabOverride: {fileID: 2490237303080821893, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
   tooltipDirection: 0
   followMouse: 0
+  additionalOffset: 0
+  allowOverflow: 0
 --- !u!1 &1466577919
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,15 +1016,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1466577919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb8e3cb140cab244acae35cd1454134, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a984ed98cbd0142a6e1aff0c83631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPrefabOverride: {fileID: 1241650657433593412, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
-  startTitle: Banana
-  startDescription: Eat fruit!
-  allowOverflow: 0
+  title: Skra
+  description: bbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  tooltipPrefabOverride: {fileID: 2490237303080821893, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
   tooltipDirection: 0
   followMouse: 0
+  additionalOffset: 0
+  allowOverflow: 0
 --- !u!1 &1628400616
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,15 +1111,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1628400616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb8e3cb140cab244acae35cd1454134, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a984ed98cbd0142a6e1aff0c83631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipPrefabOverride: {fileID: 1241650657433593412, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
-  startTitle: Bicycle
-  startDescription: For the dutchies
-  allowOverflow: 0
+  title: Skra
+  description: bbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  tooltipPrefabOverride: {fileID: 2490237303080821893, guid: 373c46f968bf4ae4cb584f5882af3701, type: 3}
   tooltipDirection: 0
   followMouse: 0
+  additionalOffset: 0
+  allowOverflow: 0
 --- !u!1 &1638800516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,3 +1220,4 @@ SceneRoots:
   - {fileID: 1638800519}
   - {fileID: 317742554}
   - {fileID: 1035147752}
+  - {fileID: 429516513}

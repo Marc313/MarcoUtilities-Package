@@ -2,6 +2,7 @@
     "name": "MarcoUtilities.GUI",
     "rootNamespace": "",
     "references": [
+        "MarcoUtilities.DesignPatterns",
         "MarcoUtilities.Extensions",
         "Unity.TextMeshPro"
     ],

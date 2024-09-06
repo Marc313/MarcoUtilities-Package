@@ -14,6 +14,8 @@ namespace MarcoUtilities.DesignPatterns
         {
             get
             {
+                if (instance == null)
+                    Debug.LogError($"Singleton of type {typeof(T)} does not have an instance in the scene!");
                 return instance;
             }
             set
