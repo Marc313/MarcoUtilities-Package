@@ -53,6 +53,16 @@ namespace MarcoUtilities.GUI.Tooltips
                 TooltipManager.Instance.Reposition(tooltipInstance.RectTransform.position + Input.mousePositionDelta);
         }
 
+        public void SetTitle(string newTitle)
+        {
+            title = newTitle;
+        }
+
+        public void SetDescription(string newDescription)
+        {
+            description = newDescription;
+        }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             isInPointer = true;
