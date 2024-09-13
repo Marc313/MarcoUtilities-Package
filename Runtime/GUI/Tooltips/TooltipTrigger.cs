@@ -35,9 +35,8 @@ namespace MarcoUtilities.GUI.Tooltips
 
         private void Awake()
         {
-            if (tooltipPrefabOverride == null)
-                throw new NotImplementedException("Tooltip: Assinging a tooltipPrefabOverride is required! " +
-                    "A default tooltip has not yet been implemented.");
+            if (tooltipPrefabOverride != null)
+                throw new NotImplementedException("Tooltip: Using a tooltipPrefabOverride is not implemented yet! ");
 
             rectTransform = GetComponent<RectTransform>();
         }

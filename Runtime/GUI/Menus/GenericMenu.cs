@@ -10,7 +10,7 @@ namespace MarcoUtilities.GUI.Menus
         [SerializeField] private Transform contentContainer;
         [SerializeField] private T1 cellPrefab;
 
-        private List<T1> cells;
+        protected List<T1> cells;
 
         public void AddEntry(T2 newEntry)
         {
@@ -28,6 +28,15 @@ namespace MarcoUtilities.GUI.Menus
                     $"tried to access cell {index}, while there are only {cells.Count} cells!");
 
             return cells[index];
+        }
+
+        // TODO: Implement Object Pooling.
+        public void Clear()
+        {
+            for (int i = cells.Count - 1; i >= 0; i--)
+                Destroy(cells[i]);
+
+            cells.Clear();
         }
 
         private void CreateCellsListIfNull()
