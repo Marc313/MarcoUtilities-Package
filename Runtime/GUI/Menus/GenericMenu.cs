@@ -33,6 +33,7 @@ namespace MarcoUtilities.GUI.Menus
         // TODO: Implement Object Pooling.
         public void Clear()
         {
+            CreateCellsListIfNull();
             for (int i = cells.Count - 1; i >= 0; i--)
                 Destroy(cells[i]);
 
