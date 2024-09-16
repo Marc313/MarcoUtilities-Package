@@ -35,7 +35,7 @@ namespace MarcoUtilities.GUI.Menus
         {
             CreateCellsListIfNull();
             for (int i = cells.Count - 1; i >= 0; i--)
-                Destroy(cells[i]);
+                Destroy(cells[i].gameObject);
 
             cells.Clear();
         }

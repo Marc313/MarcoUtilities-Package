@@ -41,6 +41,11 @@ namespace MarcoUtilities.GUI.Tooltips
             rectTransform = GetComponent<RectTransform>();
         }
 
+        private void OnDisable()
+        {
+            OnPointerExit(null);
+        }
+
         private void Update()
         {
             if (!isInPointer) return;

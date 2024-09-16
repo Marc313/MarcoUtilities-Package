@@ -1,6 +1,6 @@
 {
     "name": "com.yourcompany.utilities",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "displayName": "Marco Utilities",
     "description": "A collection of utility scripts for Unity",
     "keywords": ["utility", "tools"],
