@@ -47,6 +47,11 @@ namespace MarcoUtilities.DesignPatterns
                 foreach (EventCallback e in eventRegister[_evt])
                     e.Invoke(arguments);
         }
+
+        public static void Clear()
+        {
+            eventRegister.Clear();
+        }
     }
 } 
 

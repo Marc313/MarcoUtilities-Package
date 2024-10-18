@@ -8,11 +8,11 @@ namespace MarcoUtilities.GUI.Menus
     /// <typeparam name="T"></typeparam>
     public abstract class GenericMenuCell<T> : MonoBehaviour where T : MenuData
     {
-        protected T Data { get; private set; }
+        protected T MenuData { get; private set; }
 
         public void SetData(T data)
         {
-            Data = data;
+            MenuData = data;
             UpdateVisuals();
         }
 

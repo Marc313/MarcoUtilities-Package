@@ -11,7 +11,7 @@ namespace MarcoUtilities.GUI.Menus
     {
         public T2 GetCastedMenuData<T2>() where T2 : MenuData
         {
-            return Data as T2;
+            return MenuData as T2;
         }
     }
 

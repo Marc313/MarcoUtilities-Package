@@ -11,8 +11,8 @@ namespace MarcoUtilities.Samples.Menus
 
         public override void UpdateVisuals()
         {
-            exampleImage.sprite = Data.ExampleSprite;
-            exampleText.text = Data.ExampleText;
+            exampleImage.sprite = MenuData.ExampleSprite;
+            exampleText.text = MenuData.ExampleText;
         }
     }
 
