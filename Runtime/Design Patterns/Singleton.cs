@@ -9,6 +9,7 @@ namespace MarcoUtilities.DesignPatterns
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T instance;
+        public static bool HasInstance => instance == null;
 
         public static T Instance
         {
