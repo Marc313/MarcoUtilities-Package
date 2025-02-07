@@ -43,7 +43,34 @@ namespace MarcoUtilities.Extensions
         {
             if (collection == null || collection.Length == 0)
                 Debug.LogError($"{collection.GetType()}.GetLastEntry: Collection was null or empty!");
-            return collection[collection.Length - 1];
+            return collection[^1];
+        }
+
+        /// <summary>
+        /// Shuffles the list, by altering the list directly!
+        /// </summary>
+        public static void Shuffle<T>(this IList<T> list)
+        {
+            int n = list.Count;
+            for (int i = n - 1; i > 0; i--)
+            {
+                int j = Random.Range(0, i + 1); // Random index from 0 to i
+                (list[i], list[j]) = (list[j], list[i]); // Swap elements
+            }
+        }
+
+        /// <summary>
+        /// Shuffles the array with the Fisher-Yates shuffle, by altering the list directly!
+        /// O(n)
+        /// </summary>
+        public static void Shuffle<T>(this T[] array)
+        {
+            int n = array.Length;
+            for (int i = n - 1; i > 0; i--)
+            {
+                int j = Random.Range(0, i + 1); // Random index from 0 to i
+                (array[i], array[j]) = (array[j], array[i]); // Swap elements
+            }
         }
     }
 }

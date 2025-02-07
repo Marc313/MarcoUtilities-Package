@@ -19,6 +19,11 @@ namespace MarcoUtilities.DesignPatterns
             }
         }
 
+        public static bool HasService<T>()
+        {
+            return objects.ContainsKey(typeof(T));
+        }
+
         public static T GetService<T>()
         {
             return (T)objects[typeof(T)];
