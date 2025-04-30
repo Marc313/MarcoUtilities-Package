@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ namespace MarcoUtilities.GUI.Tabgroups
     /// </summary>
     public class TabGroup : MonoBehaviour
     {
+        public event Action<int> OnTabSelectedEvent;
+
         [SerializeField] private List<TabButton> buttons;
         [SerializeField] private List<GameObject> tabPages;
         [SerializeField] private int startingPageIndex = 0;
@@ -46,6 +49,7 @@ namespace MarcoUtilities.GUI.Tabgroups
             currentSelectedIndex = index;
             currentSelectedPage = tabPages[index];
             currentSelectedPage.SetActive(true);
+            OnTabSelectedEvent?.Invoke(currentSelectedIndex);
         }
 
         protected virtual void Reset()

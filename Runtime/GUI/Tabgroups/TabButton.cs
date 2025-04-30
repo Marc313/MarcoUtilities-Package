@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace MarcoUtilities.GUI.Tabgroups
 {
@@ -11,6 +12,12 @@ namespace MarcoUtilities.GUI.Tabgroups
         {
             Select();
             onClick?.Invoke();
+        }
+
+        public override void OnPointerClick(PointerEventData eventData)
+        {
+            base.OnPointerClick(eventData);
+            targetGraphic.color = colors.pressedColor;
         }
     }
 }
