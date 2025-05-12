@@ -16,6 +16,11 @@ namespace MarcoUtilities.GUI.Menus
             UpdateVisuals();
         }
 
+        public T GetData()
+        {
+            return MenuData;
+        }
+
         /// <summary>
         /// Meant to be called when data has changed, so that the cell can update all of its visuals appropriately.
         /// </summary>
