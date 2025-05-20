@@ -48,7 +48,7 @@ namespace MarcoUtilities
         /// <param name="targetPos"> Target Position </param>
         /// <param name="timeInSeconds"> Time it takes from A to B in seconds </param>
         /// <param name="onDone"> Callback to invoke after the async method is done. </param>
-        public IEnumerator MoveToInSecondsFromCurveCoroutine(Vector3 oldPos, Vector3 targetPos, float timeInSeconds, AnimationCurve rotationCurve, Action onDone = null)
+        public IEnumerator MoveToInSecondsFromCurveCoroutine(Vector3 oldPos, Vector3 targetPos, float timeInSeconds, AnimationCurve rotationCurve, bool endOnTargetPos, Action onDone = null)
         {
             transform.position = oldPos;
             float distance = Vector3.Distance(oldPos, targetPos);
@@ -57,11 +57,13 @@ namespace MarcoUtilities
 
             while (t < timeInSeconds)
             {
-                transform.position = Vector3.Lerp(transform.position, targetPos, rotationCurve.Evaluate(timeInSeconds / t));
+                transform.position = Vector3.Lerp(oldPos, targetPos, rotationCurve.Evaluate(t / timeInSeconds));
                 t += Time.deltaTime;
                 yield return null;
             }
-            transform.position = targetPos;
+
+            if (endOnTargetPos)
+                transform.position = targetPos;
 
             onDone?.Invoke();
         }
