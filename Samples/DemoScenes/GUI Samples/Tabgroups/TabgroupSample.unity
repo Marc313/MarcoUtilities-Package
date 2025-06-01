@@ -475,6 +475,8 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.8980392, b: 0.14117648, a: 1}
   selectedColor: {r: 0.10980392, g: 0.7411765, b: 0.88235295, a: 1}
+  disabledColor: {r: 0.42352942, g: 0.42352942, b: 0.42352942, a: 0.7176471}
+  isInteractable: 0
 --- !u!1 &1095954211
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +597,8 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.8984542, b: 0.14185262, a: 1}
   selectedColor: {r: 0.10980393, g: 0.7411765, b: 0.882353, a: 1}
+  disabledColor: {r: 0.42504293, g: 0.42504293, b: 0.42504293, a: 0.7176471}
+  isInteractable: 1
 --- !u!1 &1210938733
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +855,8 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.8980392, b: 0.14117648, a: 1}
   selectedColor: {r: 0.10980392, g: 0.7411765, b: 0.88235295, a: 1}
+  disabledColor: {r: 0.42352942, g: 0.42352942, b: 0.42352942, a: 0.7176471}
+  isInteractable: 1
 --- !u!1 &1396601103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1345,8 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.8980392, b: 0.14117648, a: 1}
   selectedColor: {r: 0.10980392, g: 0.7411765, b: 0.88235295, a: 1}
+  disabledColor: {r: 0.42352942, g: 0.42352942, b: 0.42352942, a: 0.7176471}
+  isInteractable: 1
 --- !u!1 &2020098098
 GameObject:
   m_ObjectHideFlags: 0

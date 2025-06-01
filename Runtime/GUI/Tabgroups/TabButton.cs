@@ -12,13 +12,17 @@ namespace MarcoUtilities.GUI.Tabgroups
         public Color normalColor;
         public Color highlightColor;
         public Color selectedColor;
+        public Color disabledColor;
+        public bool isInteractable = true;
 
-        private bool isSelected;
+        protected bool isSelected;
 
         protected override void Start()
         {
             transition = Selectable.Transition.None;
             base.Start();
+            if (!isInteractable)
+                targetGraphic.color = disabledColor;
         }
 
         /// <summary>
@@ -33,6 +37,9 @@ namespace MarcoUtilities.GUI.Tabgroups
 
         public void SetSelected(bool toggle)
         {
+            if (!isInteractable)
+                return;
+
             isSelected = toggle;
             if (isSelected)
                 targetGraphic.color = selectedColor;
@@ -42,18 +49,19 @@ namespace MarcoUtilities.GUI.Tabgroups
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            OnClick?.Invoke();
+            if (isInteractable)
+                OnClick?.Invoke();
         }
 
         public override void OnPointerEnter(PointerEventData eventData)
         {
-            if (!isSelected)
+            if (!isSelected && isInteractable)
                 targetGraphic.color = highlightColor;
         }
 
         public override void OnPointerExit(PointerEventData eventData)
         {
-            if (!isSelected)
+            if (!isSelected && isInteractable)
                 targetGraphic.color = normalColor;
         }
     }
