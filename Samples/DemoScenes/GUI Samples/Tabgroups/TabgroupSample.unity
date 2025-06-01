@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -450,11 +450,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0.90157795, b: 0.028301716, a: 1}
-    m_PressedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -472,9 +472,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1075342781}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.8980392, b: 0.14117648, a: 1}
+  selectedColor: {r: 0.10980392, g: 0.7411765, b: 0.88235295, a: 1}
 --- !u!1 &1095954211
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,11 +570,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0.90157795, b: 0.028301716, a: 1}
-    m_PressedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -592,9 +592,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1095954214}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.8984542, b: 0.14185262, a: 1}
+  selectedColor: {r: 0.10980393, g: 0.7411765, b: 0.882353, a: 1}
 --- !u!1 &1210938733
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,11 +826,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0.90157795, b: 0.028301716, a: 1}
-    m_PressedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -848,9 +848,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1239222086}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.8980392, b: 0.14117648, a: 1}
+  selectedColor: {r: 0.10980392, g: 0.7411765, b: 0.88235295, a: 1}
 --- !u!1 &1396601103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,11 +1314,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0.90157795, b: 0.028301716, a: 1}
-    m_PressedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1336,9 +1336,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1864099422}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.8980392, b: 0.14117648, a: 1}
+  selectedColor: {r: 0.10980392, g: 0.7411765, b: 0.88235295, a: 1}
 --- !u!1 &2020098098
 GameObject:
   m_ObjectHideFlags: 0

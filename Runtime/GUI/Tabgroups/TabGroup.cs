@@ -16,6 +16,7 @@ namespace MarcoUtilities.GUI.Tabgroups
         [SerializeField] private List<GameObject> tabPages;
         [SerializeField] private int startingPageIndex = 0;
 
+        private Action tabSelectedListener;
         private int currentSelectedIndex;
         private GameObject currentSelectedPage;
 
@@ -25,7 +26,8 @@ namespace MarcoUtilities.GUI.Tabgroups
             {
                 TabButton button = buttons[i];
                 int index = i;  // For some reason I need to copy the int here.
-                button.onClick.AddListener(() => OnTabSelected(index));
+                tabSelectedListener = () => OnTabSelected(index);
+                button.OnClick += tabSelectedListener;
             }
 
             // Select the starting page.
@@ -37,7 +39,7 @@ namespace MarcoUtilities.GUI.Tabgroups
             for (int i = 0; i < buttons.Count; i++)
             {
                 TabButton button = buttons[i];
-                button.onClick.RemoveAllListeners();
+                button.OnClick -= tabSelectedListener;
             }
         }
 
@@ -49,12 +51,24 @@ namespace MarcoUtilities.GUI.Tabgroups
             currentSelectedIndex = index;
             currentSelectedPage = tabPages[index];
             currentSelectedPage.SetActive(true);
+
+            SelectButtonWithIndex(index);
+
             OnTabSelectedEvent?.Invoke(currentSelectedIndex);
         }
 
         protected virtual void Reset()
         {
             buttons[startingPageIndex].SimulateClick();
+        }
+
+        private void SelectButtonWithIndex(int index)
+        {
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                TabButton button = buttons[i];
+                button.SetSelected(i == index);
+            }
         }
 
         // For testing reset functionality!
