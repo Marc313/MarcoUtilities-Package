@@ -25,7 +25,7 @@ namespace MarcoUtilities.DesignPatterns
             eventRegister[_evt].Add(_func);
         }
 
-        public static void Unsubscribe(int _evt, bool logWarning = true, EventCallback _func = null)
+        public static void Unsubscribe(int _evt, EventCallback _func = null, bool logWarning = true)
         {
             if (eventRegister.ContainsKey(_evt))
             {
