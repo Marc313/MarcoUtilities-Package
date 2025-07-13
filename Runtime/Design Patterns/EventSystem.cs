@@ -25,7 +25,7 @@ namespace MarcoUtilities.DesignPatterns
             eventRegister[_evt].Add(_func);
         }
 
-        public static void Unsubscribe(int _evt, EventCallback _func = null)
+        public static void Unsubscribe(int _evt, bool logWarning = true, EventCallback _func = null)
         {
             if (eventRegister.ContainsKey(_evt))
             {
@@ -34,18 +34,20 @@ namespace MarcoUtilities.DesignPatterns
                     listeners.Clear();
                 else if (_func != null)
                     listeners.Remove(_func);
-                else
+                else 
                     Debug.LogError($"EventSystem: No _func argument was specified, but multiple listeners where found!");
             }
-            else
+            else if (logWarning)
                 Debug.LogWarning($"EventSystem: Unsubscribing to event {_evt} failed, no event was registered.");
         }
 
         public static void RaiseEvent(int _evt, object[] arguments = null)
         {
             if (eventRegister.ContainsKey(_evt))
-                foreach (EventCallback e in eventRegister[_evt])
-                    e.Invoke(arguments);
+                for (int i = 0; i < eventRegister[_evt].Count; i++)
+                {
+                    eventRegister[_evt][i].Invoke(arguments);
+                }
         }
 
         public static void Clear()
